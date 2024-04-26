@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        android:layout_margin="9dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/pink_border">
+
+            <!--text view for displaying our task text-->
+           <TextView
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:id="@+id/noteTitle"
+              android:layout_weight="200"
+              android:textColor="@color/blue"
+               android:text="Task Title"
+              android:textStyle="bold"
+              android:textSize="18sp"/>
+
+            <!--text view for displaying our task content-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteDesc"
+                android:layout_marginTop="8dp"
+                android:maxHeight="170dp"
+                android:textSize="14sp"
+                android:text="Content"
+                android:textColor="@color/black"
+                />
+            <!--text view for displaying if the task has been achieved-->
+            <CheckBox
+                android:id="@+id/completedCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:padding="16dp"
+                android:focusable="true"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
